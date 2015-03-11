@@ -1,6 +1,7 @@
 title: Manuel Hutter
+author: Manuel Hutter
 # email: manuel@hutter.io
-# description:
+description: Manuel Hutter. Webdev, Linux, and the likes...
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mhutter.net"
 twitter_username: mhutter
