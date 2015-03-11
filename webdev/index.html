@@ -1,15 +1,18 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>HTML 5/CSS 3 Demos</title>
-  <link rel="stylesheet" href="/webdev/style.css">
+  <link rel="stylesheet" href="{{ '/webdev/style.css' | prepend: site.baseurl }}">
 </head>
 <body>
 
 <div class="row">
   <h1>HTML 5 / CSS 3 Demos</h1>
+  <p><a href="{{ site.baseurl }}/">&larr; back to mhutter.net</a></p>
 
   <p>Below you have a List of various HTML 5 and/or CSS 3 related Demos and Examples.
   <p>All relevant Markup and Styles are directly in the respective HTML-File. All Sources have been kept readable for your reading pleasures.</p>
@@ -18,7 +21,7 @@
 
   <h2>Demos</h2>
   <ul>
-    <li><a href="/webdev/clearfix/">Clearfix</a> - clearing floats</li>
+    <li><a href="{{ '/webdev/clearfix' | prepend: site.baseurl }}">Clearfix</a> - clearing floats</li>
   </ul>
 </div>
 

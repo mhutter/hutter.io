@@ -1,0 +1,19 @@
+---
+layout: page
+title: Post Archive
+---
+<p>
+  There is a total of <strong>{{ site.posts.size }}</strong> posts.
+  You can subscribe
+  <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>.
+</p>
+<p>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        {{post.date | date: "%Y-%m-%d"}}
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</p>

@@ -1,0 +1,3 @@
+# advertising-related bots:
+User-agent: Mediapartners-Google*
+Disallow: /
