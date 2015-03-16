@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
-<div class="col-6">
-
-  <header class="post-header">
+<div class="row">
+  <header class="page-header col-6">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">Posted on{{ page.date | date: "%b %-d, %Y" }}</p>
+    <p class="post-meta">
+      Posted on {{ page.date | date: "%b %-d, %Y" }}
+    </p>
   </header>
+</div>
 
-  <article class="post-content">
+<div class="row">
+  <article class="post-content col-4">
     {{ content }}
   </article>
 
+  {% include sidebar.html %}
 </div>

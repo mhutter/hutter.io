@@ -8,11 +8,11 @@ So you got a letter from the "Domain Renewal Group" regarding one of your domain
 
 Well, just ignore the letter. They're a bunch of dicks.
 
-**Background**
+### Background
 
 Apparently, the Domain Renewal Group's core business is to scam people into transferring their domains to them and then charging a shitload of money for their "service". **As long as you just ignore the letter, your domains are safe!**
 
-**See also**
+### See also
 
 * [Domain Renewal Group - Servage Wiki](https://www.servage.net/wiki/Domain_Renewal_Group)
 * [Re: Anyone know anything about "Domain Renewal Group'??](https://groups.google.com/forum/#!topic/news.admin.net-abuse.email/OAs1EEHm2Jc)

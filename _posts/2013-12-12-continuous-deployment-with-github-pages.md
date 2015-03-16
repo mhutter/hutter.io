@@ -9,17 +9,17 @@ Or **how to let Travis-CI merge into master if the build is successful**.
 It is way easier than I thought.
 
 
-## Prerequisites
+### Prerequisites
 * The `travis` gem
 * Travis-CI integration up and running (ie `.travis.yml` is set up).
 
 
-## Step 1: Acquire Github Access Token
+### Step 1: Acquire Github Access Token
 This is required because we don't want to write our Github username and password anywhere.
 Go to your [Github Application Settings](https://github.com/settings/applications) and create a new Token.
 
 
-## Step 2: Encrypt the token
+### Step 2: Encrypt the token
 Even the Token is not something to post on your Twitter.
 {% highlight bash %}
 travis encrypt -a - GITHUB_TOKEN=your_generated_token
@@ -28,7 +28,7 @@ travis encrypt -a - GITHUB_TOKEN=your_generated_token
 Your token will be encrypted and automatically added to your .travis.yml file.
 
 
-## Step 3: Add some magic to your Travis config
+### Step 3: Add some magic to your Travis config
 'nuff said. Add these lines to .travis.yml (note this are only two lines):
 
 {% highlight yaml %}
