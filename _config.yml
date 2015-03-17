@@ -3,7 +3,7 @@ author: Manuel Hutter
 # email: manuel@hutter.io
 description: Manuel Hutter. Webdev, Linux, and the likes...
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://mhutter.net"
+url: "http://www.mhutter.net"
 
 permalink: pretty
 paginate: 10
@@ -16,7 +16,7 @@ exclude:
   - Gemfile.lock
   - Rakefile
 include:
-  - .htaccess
+  - '.htaccess'
 
 # Build settings
 markdown: kramdown

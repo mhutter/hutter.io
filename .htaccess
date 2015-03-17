@@ -1,3 +1,3 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www.mhutter.net$ [NC]
-RewriteRule ^(.*)$ http://mhutter.net$1 [R=301,QSA]
+RewriteCond %{HTTP_HOST} ^mhutter.net [NC]
+RewriteRule ^(.*)$ http://www.mhutter.net$1 [L,R=301,QSA]

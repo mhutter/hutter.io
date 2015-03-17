@@ -17,5 +17,5 @@ task :rebuild => [:clean, :build]
 
 desc 'Upload the site'
 task :deploy => [:build] do
-  system 'rsync -aPz --delete _site/* mhutter.net:public_html/mhutter.net/'
+  system 'rsync -aPz --delete _site/ mhutter.net:public_html/mhutter.net/'
 end
