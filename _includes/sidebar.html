@@ -1,5 +1,17 @@
 <div class="col-2">
-  <div class="well">
-    Sidebar!
+  <div class="well muted">
+    <h3>About me</h3>
+    <hr>
+    <p>I'm a Linux System Engineer that likes to pretend he's a web developer.</p>
+  </div>
+
+  <div class="well muted">
+    <h3>Recent posts</h3>
+    <hr>
+    <ul>
+    {% for post in site.posts limit: 5 %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
   </div>
 </div>

@@ -1,0 +1,104 @@
+.page-header {
+  background: #1c1c1c;
+  padding: 12px 20px;
+}
+.page-header:before,
+.page-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  margin: 0;
+}
+.logo a,
+.logo a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  float: left;
+}
+
+.to_menu {
+  float: right;
+  color: #fff;
+  background: #4e4e4e;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 22px;
+  height: 22px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.to_menu:hover,
+.to_menu:focus {
+  color: #1c1c1c;
+  background: #ccc;
+}
+
+
+.menu ul {
+  list-style: none;
+  background: #1c1c1c;
+  padding: 5px 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 2em;
+  height: 2em;
+  border-bottom: 1px solid #383838;
+}
+.menu li:last-child a {
+  border-bottom: none;
+}
+.menu li a.disabled {
+  color: #aaa;
+}
+
+.menu li a:hover:not(.disabled),
+.menu li a:focus:not(.disabled) {
+  color: #1c1c1c;
+  background: #ccc;
+}
+
+@media only screen and (min-width: 700px) {
+  .to_menu {
+    display: none;
+  }
+
+  .page-header header {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+  }
+
+  .menu {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+  }
+  .menu li {
+    display: inline;
+  }
+  .menu li a {
+    float: left;
+    border: none;
+    padding: 0 10px;
+    border-radius: 2px;
+  }
+  .menu li.top {
+    display: none;
+  }
+}
