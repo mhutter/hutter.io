@@ -8,10 +8,15 @@ url: "http://mhutter.net"
 permalink: pretty
 paginate: 10
 
+sass:
+  style: :compressed
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+include:
+  - .htaccess
 
 # Build settings
 markdown: kramdown
