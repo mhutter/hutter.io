@@ -1,7 +1,7 @@
 RewriteEngine on
 
-RewriteCond ${HTTPS} =off
-RewriteRule ^ https://www.mhutter.net${REQUEST_URI} [QSA,L,R=301]
+RewriteCond %{HTTPS} =off
+RewriteRule ^ https://www.mhutter.net%{REQUEST_URI} [QSA,L,R=301]
 
 RewriteCond %{HTTP_HOST} ^mhutter.net [NC]
-RewriteRule ^ https://www.mhutter.net${REQUEST_URI} [QSA,L,R=301]
+RewriteRule ^ https://www.mhutter.net%{REQUEST_URI} [QSA,L,R=301]
