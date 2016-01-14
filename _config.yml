@@ -3,7 +3,7 @@ author: Manuel Hutter
 # email: manuel@hutter.io
 description: Manuel Hutter. Webdev, Linux, and the likes...
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.mhutter.net"
+url: "https://www.mhutter.net"
 gems: [jekyll-paginate]
 
 permalink: pretty
