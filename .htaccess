@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} =off
+RewriteRule ^ https://www.hutter.io%{REQUEST_URI} [QSA,L,R=301]
+
+RewriteCond %{HTTP_HOST} ^hutter.io [NC]
+RewriteRule ^ https://www.hutter.io%{REQUEST_URI} [QSA,L,R=301]
