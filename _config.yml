@@ -18,6 +18,7 @@ github_username:  mhutter
 
 # Build settings
 markdown: kramdown
+highlight: rouge
 permalink: pretty
 
 sass:
@@ -27,5 +28,6 @@ exclude:
   - Gemfile
   - Gemfile.locl
   - Rakefile
+  - vendor
 include:
   - '.htaccess'
