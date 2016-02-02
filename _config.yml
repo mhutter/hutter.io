@@ -17,8 +17,6 @@ twitter_username: dratir
 github_username:  mhutter
 
 # Build settings
-markdown: kramdown
-highlight: rouge
 permalink: pretty
 
 sass:
