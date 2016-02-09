@@ -22,6 +22,9 @@ permalink: pretty
 sass:
   style: compressed
 
+gems:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.locl
