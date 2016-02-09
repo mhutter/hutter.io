@@ -1,3 +1,8 @@
+desc 'start the preview server'
+task :serve do
+  system 'bundle exec jekyll serve -H 0.0.0.0'
+end
+
 desc 'build the site'
 task :build do
   system 'bundle exec jekyll build'
