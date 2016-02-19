@@ -5,7 +5,7 @@
 
   <title>{% if page.title %}{{ page.title | escape }} &middot; {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
-  <meta name="author" content="Manuel Hutter">
+  {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: "," }},{% endif %}Manuel Hutter">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">

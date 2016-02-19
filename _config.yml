@@ -7,7 +7,8 @@
 
 # Site settings
 title: hutter.io
-email: manuel@hutter.io
+author: Manuel Hutter
+email: manuel at hutter.io
 description: > # this means to ignore newlines until "baseurl:"
   Webdev, Linux and the likes...
   I'm a Linux System Engineer that likes to pretend he's a web developer.
