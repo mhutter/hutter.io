@@ -19,12 +19,14 @@ github_username:  mhutter
 
 # Build settings
 permalink: pretty
+paginate: 10
 
 sass:
   style: compressed
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 exclude:
   - Gemfile

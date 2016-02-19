@@ -1,0 +1,41 @@
+.pager {
+  text-align: center;
+}
+.pagination {
+  display: inline-block;
+  text-align: center;
+  margin: $spacing-unit;
+
+  li {
+    display: inline;
+  }
+
+  li > * {
+    line-height: 1.5;
+    float: left;
+    padding: .5rem .75rem;
+    margin-right: -1px;
+    color: $brand-color;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  li:first-child > * {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  li:last-child > * {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  li.current > * {
+    background: $brand-color;
+    color: #fff;
+  }
+  li.disabled > * {
+    color: #888;
+    cursor: not-allowed;
+  }
+}
