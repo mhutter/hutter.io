@@ -18,10 +18,13 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  padding-right: 30px;
 
   &,
-  &:visited {
+  &:visited,
+  &:hover {
     color: #fff;
+    border: none;
   }
 }
 
@@ -40,6 +43,10 @@
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    &:hover {
+      border-color: #fff;
     }
   }
 
@@ -181,8 +188,14 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
-    border-bottom: 1px solid $brand-color;
+    margin: $spacing-unit 0;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit * 2;
+    border-bottom: 1px solid #ddd;
+  }
+  > li:first-child {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
