@@ -21,6 +21,7 @@ layout: default
   </ul>
 
   {% include pagination.html %}
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">
+    {% include icon-rss.html %}
+  </p>
 </div>
