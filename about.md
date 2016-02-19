@@ -7,7 +7,7 @@ permalink: /about/
 This Page was built using [Jekyll](http://jekyllrb.com/).
 You can find its source code at
 {% include icon-github.html username="mhutter" %} /
-[mhutter.github.io](https://github.com/mhutter/mhutter.github.io/)
+[hutter.io](https://github.com/mhutter/hutter.io/)
 
 It uses a customized version of the Jekyll new theme.
 You can find the source code for the original Jekyll new theme at:
