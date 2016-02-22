@@ -1,0 +1,41 @@
+<header id="site-header">
+  <h1 id="site-title">
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+  </h1>
+  <button id="navbar-toggle" type="button">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</header>
+
+<nav id="main-menu">
+  <ul class="sidebar-link-list">
+    {% for p in site.pages %}{% if p.title %}
+      {% if page.url == p.url %}<li class="current">{% else %}<li>{% endif %}
+      <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+    {% endif %}{% endfor %}
+  </ul>
+</nav>
+
+<section id="site-footer">
+  <ul class="sidebar-link-list">
+    <li><h2>{{ site.author }}</h2></li>
+    {% if site.github_username %}
+      <li>{% include icon-github.html username=site.github_username %}</li>
+    {% endif %}
+    {% if site.twitter_username %}
+      <li>{% include icon-twitter.html username=site.twitter_username %}</li>
+    {% endif %}
+    <li><p>{{ site.description }}</p></li>
+    <li>{% include icon-rss.html %}</li>
+    <li><p>
+      This Page was built using <a href="https://jekyllrb.com/">Jekyll</a>.
+      You can find its source code at
+      {% include icon-github.html username="mhutter" %} /
+      <a href="https://github.com/mhutter/hutter.io/">hutter.io</a>
+    </p></li>
+  </ul>
+
+</section>
