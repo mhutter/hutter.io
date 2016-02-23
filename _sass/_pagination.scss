@@ -5,9 +5,11 @@
   display: inline-block;
   text-align: center;
   margin: $spacing-unit;
+  font-size: $base-font-size;
 
   li {
-    display: inline;
+    display: inline-block;
+    margin: 0;
   }
 
   li > * {
@@ -24,10 +26,12 @@
   li:first-child > * {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    padding: .5rem 1rem;
   }
   li:last-child > * {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    padding: .5rem 1rem;
   }
 
   li.current > * {
