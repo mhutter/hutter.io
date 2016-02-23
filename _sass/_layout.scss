@@ -2,9 +2,8 @@
     background-color: #fff;
 }
 #site-header {
-  padding: $spacing-unit;
+  padding: $spacing-unit / 2;
   position: relative;
-  border-bottom: 1px solid #eee;
   background: $brand-color;
   background-image: linear-gradient(120deg, #2179d4, #2bbb21);
 }
@@ -22,8 +21,8 @@
   top: 0;
   right: 0;
   padding: $spacing-unit / 2;
-  margin: $spacing-unit;
-  border: 1px solid #e5e5e5;
+  margin: $spacing-unit / 2;
+  border: 1px solid $grey-color-light;
   border-radius: 4px;
   background-color: #fff;
   font-size: 1.5em;
@@ -49,7 +48,7 @@
   margin: 0px;
 
   li {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $grey-color-light;
     padding: 0.8em 0;
   }
   li:first-child {
@@ -71,4 +70,24 @@
 #site-footer {
   padding: $spacing-unit;
   border-top: 1px solid #eee;
+}
+
+.post {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+  background: #fff;
+}
+.post > * {
+  padding: 0 $spacing-unit / 2;
+}
+
+.post-title {
+  margin: 0 0 $spacing-unit/2 0;
+}
+
+.post-content {
+  padding: 0 $spacing-unit / 2;
+}
+.post-footer {
+  color: $grey-color;
 }

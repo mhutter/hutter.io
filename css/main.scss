@@ -7,9 +7,10 @@
 // Our variables
 $base-font-family: "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   18px;
+$mobile-font-size: $base-font-size / 1.2;
 $base-font-weight: 400;
 $light-font-weight: 300;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  0.875rem;
 $base-line-height: 1.5;
 
 $spacing-unit:     32px;
@@ -19,9 +20,8 @@ $body-color:       #dfdfdf;
 $background-color: #fff;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:       #757575;
+$grey-color-light: #e5e5e5;
 
 // Width of the content area
 $content-width:    900px;

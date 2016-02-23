@@ -26,7 +26,7 @@ html {
 * Basic styling
 */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$mobile-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $body-color;
   -webkit-text-size-adjust: 100%;
@@ -163,11 +163,17 @@ pre {
 * Icons
 */
 .icon {
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
   > svg {
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-bottom: 4px;
+    height: 16px;
+    // margin-bottom: 4px;
     vertical-align: middle;
 
     path {
@@ -192,4 +198,8 @@ pre {
 
 .hidden {
   display: none;
+}
+
+.small {
+  font-size: $small-font-size;
 }
