@@ -5,6 +5,7 @@ end
 
 desc 'build the site'
 task :build do
+  puts "===> building site..."
   system 'bundle exec jekyll build'
 end
 
@@ -20,6 +21,7 @@ task :rebuild => [:clean, :build]
 
 desc 'deploy site to the webserver'
 task :deploy => [:rebuild] do
+  puts "===> uploading site"
   system 'rsync -aPz --delete _site/ hutter.io:public_html/hutter.io/'
 end
 
@@ -57,6 +59,6 @@ namespace :new do
       EOT
     end
 
-    puts "Wrote new post: #{path}"
+    puts "===> Wrote new post: #{path}"
   end # new:post
 end
