@@ -1,25 +1,19 @@
-<footer class="site-footer">
-  <div class="wrapper">
-    <h2 class="footer-heading">{{ site.title }}</h2>
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.author }}</li>
-        </ul>
-      </div>
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>{% include icon-github.html username=site.github_username %}</li>
-          {% endif %}
-          {% if site.twitter_username %}
-          <li>{% include icon-twitter.html username=site.twitter_username %}</li>
-          {% endif %}
-        </ul>
-      </div>
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-  </div>
+<footer id="site-footer">
+  <ul class="sidebar-link-list">
+    <li><h2>{{ site.author }}</h2></li>
+    {% if site.github_username %}
+      <li>{% include icon-github.html username=site.github_username %}</li>
+    {% endif %}
+    {% if site.twitter_username %}
+      <li>{% include icon-twitter.html username=site.twitter_username %}</li>
+    {% endif %}
+    <li><p>{{ site.description }}</p></li>
+    <li>{% include icon-rss.html %}</li>
+    <li><p class="small">
+      Made with &lt;3 by <a href="https://github.com/mhutter">mhutter</a>
+      &middot; <a href="https://github.com/mhutter/hutter.io/">source</a>
+      &middot; Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+      &middot; Hosted by <a href="https://order.cyon.ch/affiliate/8041982c-1745-41f7-94bc-bb67c7066785">cyon</a>
+    </p></li>
+  </ul>
 </footer>
