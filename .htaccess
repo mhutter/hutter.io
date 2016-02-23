@@ -3,7 +3,7 @@ Header set Strict-Transport-Security "max-age=15552000"
 RewriteEngine On
 
 RewriteCond %{HTTPS} =off
-RewriteRule ^ https://www.hutter.io%{REQUEST_URI} [QSA,L,R=301]
+RewriteRule ^ https://hutter.io%{REQUEST_URI} [QSA,L,R=301]
 
-RewriteCond %{HTTP_HOST} ^hutter.io [NC]
-RewriteRule ^ https://www.hutter.io%{REQUEST_URI} [QSA,L,R=301]
+RewriteCond %{HTTP_HOST} ^www.hutter.io [NC]
+RewriteRule ^ https://hutter.io%{REQUEST_URI} [QSA,L,R=301]

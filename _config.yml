@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Webdev, Linux and the likes...
   I'm a Linux System Engineer that likes to pretend he's a web developer.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.hutter.io" # the base hostname & protocol for your site
+url: "https://hutter.io" # the base hostname & protocol for your site
 twitter_username: dratir
 github_username:  mhutter
 
