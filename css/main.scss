@@ -17,20 +17,20 @@ $spacing-unit:     32px;
 
 $text-color:       #111;
 $body-color:       #dfdfdf;
+$body-color:       rgb(241, 241, 241);
 $background-color: #fff;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #757575;
 $grey-color-light: #e5e5e5;
 
-// Width of the content area
-$content-width:    900px;
-
-$on-tablet:        768px;
-$on-laptop:        992px;
+$on-phone:         859px;
+$on-tablet:        860px;
+$on-laptop:        1024px;
+$on-large-screen:  1680px;
 
 // Use media queries like this:
-// @include media-query($on-palm) {
+// @include media-query($on-tablet) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;

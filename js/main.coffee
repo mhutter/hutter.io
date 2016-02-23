@@ -6,12 +6,12 @@ window.onload = ->
   b = document.getElementById 'navbar-toggle'
 
   showMenu = ->
-    c.classList.remove 'hidden'
+    c.classList.remove 'collapsed'
     b.onclick = hideMenu
 
   hideMenu = ->
-    c.classList.add 'hidden'
+    c.classList.add 'collapsed'
     b.onclick = showMenu
 
-  c.classList.add 'hidden'
+  c.classList.add 'collapsed'
   b.onclick = showMenu

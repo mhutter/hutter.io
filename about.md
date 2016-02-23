@@ -4,16 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This Page was built using [Jekyll](http://jekyllrb.com/).
-You can find its source code at
-{% include icon-github.html username="mhutter" %} /
-[hutter.io](https://github.com/mhutter/hutter.io/)
+My name is Manuel Hutter. I'm a Linux System Engineer / Software Engineer from Switzerland. Here on hutter.io I sometimes write about stuff I think others could find interesting - but mostly about stuff I would forget otherwise!
 
-It uses a customized version of the Jekyll new theme.
-You can find the source code for the original Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I do a lot of [programmering](https://twitter.com/codinghorror/status/644489270913175553) in my spare time. You can find most of this stuff up on Github: {% include icon-github.html username=site.github_username %}
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+If you have the twitters, you can follow me at {% include icon-twitter.html username=site.twitter_username %}. I'm also active on [Stack Overflow](http://stackoverflow.com/users/405454/mhutter), where I also have a [public CV](https://stackoverflow.com/cv/mhutter).
+
+If you want to email me... well, you know my first name, and you know which domain this site is hosted on ;-)
