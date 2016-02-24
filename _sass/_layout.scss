@@ -94,12 +94,15 @@
   margin: 0px;
 }
 
-.post-content {
-  padding: 0 $spacing-unit / 2;
+.post-header {
+  padding-bottom: 0 !important;
 }
 .post-footer {
-  padding-top: $spacing-unit / 2;
+  padding-top: 0 !important;
   color: $grey-color;
+}
+.comments {
+  padding-top: 0 !important;
 }
 
 @include media-query($on-tablet) {
@@ -140,12 +143,6 @@
     margin-bottom: $spacing-unit;
   }
   .post > * {
-    padding: $spacing-unit;
-  }
-  .post-content {
-    padding: 0 $spacing-unit;
-  }
-  .post-footer {
     padding: $spacing-unit;
   }
 }
