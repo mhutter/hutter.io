@@ -5,7 +5,35 @@
   padding: $spacing-unit / 2;
   position: relative;
   background: $brand-color;
-  background-image: linear-gradient(120deg, #2179d4, #2bbb21);
+
+  background: linear-gradient(120deg, #2179d4, #2bbb21);
+  background-size: 200% 200%;
+
+  -webkit-animation: HeaderAnimation 29s ease infinite;
+  -moz-animation: HeaderAnimation 29s ease infinite;
+  -o-animation: HeaderAnimation 29s ease infinite;
+  animation: HeaderAnimation 29s ease infinite;
+
+  @-webkit-keyframes HeaderAnimation {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-moz-keyframes HeaderAnimation {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-o-keyframes HeaderAnimation {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @keyframes HeaderAnimation {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
 }
 
 #site-title {
