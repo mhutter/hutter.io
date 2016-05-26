@@ -36,7 +36,7 @@ gems:
 
 exclude:
   - Gemfile
-  - Gemfile.locl
+  - Gemfile.lock
   - Rakefile
   - vendor
 include:
