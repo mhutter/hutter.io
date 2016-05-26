@@ -7,15 +7,19 @@
 
 # Site settings
 title: hutter.io
-author: Manuel Hutter
+author:
+  name: Manuel Hutter
+  twitter: dratir
+  github: mhutter
 email: manuel at hutter.io
 description: > # this means to ignore newlines until "baseurl:"
-  Webdev, Linux and the likes...
+  Webdev, DevOps, Linux and the likes...
   I'm a Linux System Engineer that likes to pretend he's a web developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hutter.io" # the base hostname & protocol for your site
-twitter_username: dratir
-github_username:  mhutter
+
+twitter:
+  username: dratir
 
 # Build settings
 permalink: pretty
@@ -28,6 +32,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-coffeescript
+  - jekyll-seo-tag
 
 exclude:
   - Gemfile
