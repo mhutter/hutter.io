@@ -3,6 +3,9 @@
 <div id="menu-collapse">
   <nav id="main-menu">
     <ul class="sidebar-link-list">
+      {% if page.url == '/' %}<li class="current">{% else %}<li>{% endif %}
+        <a href="{{ site.baseurl }}/">Blog</a>
+      </li>
       {% for p in site.pages %}{% if p.title %}
         {% if page.url == p.url %}<li class="current">{% else %}<li>{% endif %}
         <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
