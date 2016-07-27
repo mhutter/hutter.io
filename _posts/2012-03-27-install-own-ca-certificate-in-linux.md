@@ -13,13 +13,13 @@ tags: [linux, sles, ubuntu, openssl, centos]
 
 _Tested under **Ubuntu** and **SLES 11** so far._
 
-### Required Packages
+## Required Packages
 
 install with `apt-get install ...` or similar
 
 * `openssl`
 
-### Steps
+## Steps
 
 {% highlight bash %}
 # Step 0: Convert the Certificate to PEM format
@@ -45,13 +45,13 @@ $ ln -s certificate.pem `openssl x509 -hash -noout -in certificate.pem`.0
 
 ## CentOS
 
-### Required Packages
+## Required Packages
 
 install with `yum install ...` or similar
 
 * `ca-certificates`
 
-### Steps
+## Steps
 
 {% highlight bash %}
 # Enable the CA configuration feature

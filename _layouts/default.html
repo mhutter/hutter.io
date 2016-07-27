@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <div id="page">
-      <div id="sidebar">{% include sidebar.html %}</div>
-      <div id="content">{{ content }}</div>
-    </div>
-    <script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
-  </body>
+{% include head.html %}
+<body>
+
+{{ content }}
+
+<script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+</body>
 </html>

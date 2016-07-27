@@ -17,7 +17,7 @@ One thing I still cannot remember after YEARS of usage is the scheduling syntax 
 - `cmd`: command to execute
 
 
-### Expressions
+## Expressions
 
 Instead of fixed numbers, you can also use expressions. You probably already know the **asterisk** (`*`) to match _every value_, but there are more:
 

@@ -8,13 +8,13 @@ tags: [SSL,java,tomcat]
 To use an SSL certificate with Tomcat, you need to store it in a Java keystore File. You can generate both the keystore and the certificate using the Java command `keytool`.
 
 
-### Step 0: Find your `keytool`
+## Step 0: Find your `keytool`
 
 Make sure you have Java and `keytool` command (ships with Java) installed. If you installed the JDK or JRE yourself it may not be in your `$PATH`.
 
 For example, my `keytool` is in `./jdk1.8/bin/`.
 
-### Step 1: Generate the keystore and the certificate
+## Step 1: Generate the keystore and the certificate
 
 Before we begin, a note about the "alias" and the "common name" of the certificate:
 
@@ -49,7 +49,7 @@ Enter key password for <lea-prod>
 
 Great, now the keystore has been created (if it didn't exist already) and your self-signed certificate has been added to it.
 
-### Step 2: Configure Tomcat
+## Step 2: Configure Tomcat
 
 To use the new certificate, configure your Tomcat accordingly:
 

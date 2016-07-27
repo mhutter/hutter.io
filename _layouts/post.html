@@ -1,19 +1,36 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-  </header>
-  <div class="post-content" itemprop="articleBody">{{ content }}</div>
-  <footer class="post-footer">
-    <p class="post-meta">
-      {% include icon-calendar.html %}
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%a, %-d. %b %Y" }}</time>
-      {% if page.author %}
-        &middot; <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}
+
+<header id="header">
+  <img class="logo" src="{{ '/img/mh.png' | prepend: site.baseurl }}" alt="Manuel Hutter">
+  <h1>{{ page.title }}</h1>
+  <p>
+    <a href="{{ '/' | prepend: site.baseurl }}">by {{ site.author.name }}</a>
+  </p>
+</header>
+
+<main>
+
+{{ content }}
+
+  <section id="share">
+    <h2>Why not...</h2>
+    <p class="buttons">
+      <a class="button facebook"
+          href="https://www.facebook.com/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}"
+          rel="nofollow"
+          target="_blank">
+        <em>share on</em>
+        <strong>Facebook</strong>
+      </a>
+      <a class="button twitter"
+          href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}"
+          rel="nofollow"
+          target="_blank">
+        <em>share on</em>
+        <strong>Twitter</strong>
+      </a>
     </p>
-  </footer>
-  {% include comments.html %}
-</article>
+  </section>
+</main>
