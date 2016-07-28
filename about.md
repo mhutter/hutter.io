@@ -4,6 +4,14 @@ title: About
 permalink: /about/
 ---
 
+## {{ site.author.name }}
+
+<nav id="about" class="links">
+  {% include icon-github.html username=site.author.github %}
+  {% include icon-twitter.html username=site.author.twitter %}
+  {% include icon-rss.html %}
+</nav>
+
 My name is Manuel Hutter. I'm a Linux System Engineer / Software Engineer from Switzerland. Here on hutter.io I sometimes write about stuff I think others could find interesting - but mostly about stuff I would forget otherwise!
 
 I do a lot of [programmering](https://twitter.com/codinghorror/status/644489270913175553) in my spare time. You can find most of this stuff up on Github: {% include icon-github.html username=site.author.github %}

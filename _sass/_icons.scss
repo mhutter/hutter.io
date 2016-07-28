@@ -1,0 +1,15 @@
+.icon {
+  text-decoration: none;
+  text-rendering: auto;
+}
+
+.icon > svg {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+
+  path {
+    fill: #757575;
+  }
+}

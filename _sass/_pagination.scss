@@ -1,0 +1,43 @@
+.pager {
+  text-align: center;
+  margin: 2em 0;
+}
+.pagination {
+  display: inline-block;
+  text-align: center;
+  // margin: $spacing-unit;
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  li > * {
+    line-height: 1.5;
+    float: left;
+    padding: 0.75em 1em;
+    margin-right: -1px;
+    color: $primary-color;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  li:first-child > * {
+    border-top-left-radius: 3388px;
+    border-bottom-left-radius: 3388px;
+  }
+  li:last-child > * {
+    border-top-right-radius: 3388px;
+    border-bottom-right-radius: 3388px;
+  }
+
+  li.current > * {
+    background: $primary-color;
+    color: #fff;
+  }
+  li.disabled > * {
+    color: #888;
+    cursor: not-allowed;
+  }
+}

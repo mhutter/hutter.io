@@ -1,0 +1,15 @@
+@include media-query($on-tablet) {
+  body {
+    font-size: 18px;
+  }
+  nav a {
+    display: inline;
+    margin: 0 1em;
+  }
+
+  .button {
+    display: inline-block;
+    width: 25%;
+    margin: 0;
+  }
+}

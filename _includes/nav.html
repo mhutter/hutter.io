@@ -1,0 +1,10 @@
+<a {% if page.url == '/' %}class="current"{% endif %}
+    href="{{ '/' | prepend: site.baseurl }}">
+  Blog
+</a>
+{% for p in site.pages %}{% if p.title %}
+<a {% if page.url == p.url %}class="current"{% endif %}
+    href="{{ p.url | prepend: site.baseurl }}">
+  {{ p.title }}
+</a>
+{% endif %}{% endfor %}

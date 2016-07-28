@@ -1,23 +1,16 @@
 ---
-layout: default
+layout: page
 ---
-<div id="post-list">
-  {% for post in paginator.posts %}
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header class="post-header">
-        <h2 class="post-title">
-          <a href="{{ post.url | prepend: site.baseurl }}" itemprop="name headline">{{ post.title }}</a>
-        </h2>
-      </header>
-      <div class="post-content" itemprop="articleBody">{{ post.content }}</div>
-      <footer class="post-footer">
-        <span class="post-meta">
-          {% include icon-calendar.html %}
-          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%a, %-d. %b %Y" }}</time>
-        </span>
-      </footer>
-    </article>
-  {% endfor %}
-</div>
+
+{% for post in paginator.posts %}
+  <article class="post-preview">
+    <header>
+      <h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </header>
+    <p class="post-content">{{ post.excerpt }}</p>
+  </article>
+{% endfor %}
 
 {% include pagination.html %}

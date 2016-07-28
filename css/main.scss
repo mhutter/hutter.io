@@ -4,15 +4,16 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 // Our variables
-$primary-color:      #2a7ae2;
-$secondary-color:    #2bbb21;
+$primary-color:      hsl(214, 76, 53);
+$primary-color-dark: hsl(214, 76, 25);
+$secondary-color:    hsl(116, 70, 43);
 
 $grey-color:       #757575;
 $grey-color-light: #e5e5e5;
 
-$on-tablet:        768px;
-$on-desktop:       992px;
-$on-large-desktop:  1200px;
+$on-tablet:         768px;
+$on-desktop:        992px;
+$on-large-desktop: 1200px;
 
 // Use media queries like this:
 // @include media-query($on-tablet) {
@@ -33,12 +34,18 @@ body {
   line-height: 1.5;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
+  font-size: 16px;
 }
 
 main {
-  padding: 4em 1em;
+  padding: 20px 10px;
   margin: 0 auto;
   max-width: 50em;
+}
+#post {
+  p:first-child {
+    font-size: 1.2em;
+  }
 }
 
 h2 {
@@ -53,9 +60,13 @@ strong {
 
 a {
   color: $primary-color;
+  font-weight: bold;
+}
+a:visited {
+  color: $primary-color-dark;
 }
 
-header {
+#page-header {
   max-width: none;
   padding: 10vw 2em;
   background-image: url('../img/header.jpg');
@@ -65,6 +76,10 @@ header {
   line-height: 1.2;
   text-align: center;
 
+  nav a {
+    font-size: 0.8em;
+  }
+
   h1 {
     color: #fff;
     font-size: 2.5em;
@@ -72,26 +87,30 @@ header {
     font-weight: normal;
   }
 
-  a {
-    border: 1px solid $primary-color;
-    border-radius: 3388px;
-    color: #fff;
-    font-size: 0.8em;
-    padding: 1em 2em;
-    text-decoration: none;
-    transition: none 200ms ease-out;
-    transition-property: color, background;
-  }
-  a:hover {
-    background: $primary-color;
-    color: #fff;
-  }
-
   img {
     display: inline-block;
     height: 120px;
     width: 120px;
     vertical-align: top;
+  }
+}
+
+nav a,
+nav a:visited {
+  border: 1px solid $primary-color;
+  border-radius: 3388px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 1em 2em;
+  margin: 1em 0;
+  display: block;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+
+  &:hover, &.current {
+    background: $primary-color;
+    color: #fff;
   }
 }
 
@@ -113,10 +132,7 @@ pre {
 }
 
 .buttons {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 0;
+  text-align: center;
 }
 
 @mixin social-button($color) {
@@ -125,23 +141,27 @@ pre {
 }
 
 .button {
-  width: 30%;
   border: 1px solid #ddd;
   border-radius: 3388px;
-  color: #bbc;
-  padding: 1em 1.5em;
+  padding: 1em;
+  margin: 1em;
   text-align: center;
   text-decoration: none;
   transition: none 200ms ease-out;
   transition-property: color, background;
   display: block;
 
+  &, &:visited {
+    color: #bbc;
+  }
+
   &:hover {
     border-color: transparent;
     strong { color: #fff !important; }
   }
   &.facebook { @include social-button(#3b5998); }
-  &.twitter  { @include social-button(#55acee); }
+  &.twitter  { @include social-button(#1da1f3); }
+  &.hn       { @include social-button(#ff6600); }
 
   em {
     display: block;
@@ -149,4 +169,52 @@ pre {
   }
 }
 
+nav#about {
+  a,
+  a:visited {
+    color: $primary-color;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a:hover path {
+    fill: #fff;
+  }
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  background: #eee;
+  color: #333;
+  padding: 2em;
+
+  hr {
+    margin: 2em 1em;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.post-preview h2 {
+  font-weight: normal;
+  a {
+    text-decoration: none;
+  }
+}
+
+.nowrap { white-space: nowrap; }
+
+@import "responsive";
+@import "icons";
 @import "syntax-highlighting";
+@import "pagination";
+
+.sw--love:hover {
+  span { display: none; }
+  &:after { content: "love"; }
+}
