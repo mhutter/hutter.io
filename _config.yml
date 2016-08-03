@@ -31,7 +31,6 @@ sass:
 gems:
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-coffeescript
   - jekyll-seo-tag
 
 exclude:
