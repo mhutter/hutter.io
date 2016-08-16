@@ -2,6 +2,7 @@
 layout: post
 title: Crontab Syntax
 excerpt: A quick tutorial on the Crontab scheduling syntax
+crosspost_to_medium: true
 tags: [cron]
 ---
 

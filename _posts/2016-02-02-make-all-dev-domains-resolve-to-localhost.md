@@ -2,6 +2,7 @@
 layout: post
 title: Make all *.dev domains resolve to localhost
 excerpt: Use dnsmasq to resolve a wildcard domain on Linux
+crosspost_to_medium: true
 tags: [dnsmasq,dns,wildcard,dev,centos]
 ---
 

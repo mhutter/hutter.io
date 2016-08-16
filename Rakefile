@@ -53,6 +53,7 @@ namespace :new do
         ---
         layout: post
         title: #{title}
+        crosspost_to_medium: false
         #excerpt: Write me!
         #tags: [foo,bar]
         ---

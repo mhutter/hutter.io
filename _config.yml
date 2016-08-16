@@ -32,6 +32,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-crosspost-to-medium
 
 exclude:
   - Gemfile
@@ -41,3 +42,11 @@ exclude:
   - README.md
 include:
   - '.htaccess'
+
+jekyll-crosspost_to_medium:
+  enabled: true
+  cache: .jekyll-crosspost_to_medium
+  status: public
+  license: all-rights-reserved
+  text: '<p><i>(first published on <a href="{{ url }}">hutter.io</a>)</i></p>'
+  backdate: true
