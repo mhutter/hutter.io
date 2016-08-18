@@ -129,6 +129,9 @@ pre {
   border-bottom: 1px solid #ddd;
   border-left: 2px solid $secondary-color;
   overflow-x: auto;
+  code {
+    padding: 0;
+  }
 }
 
 .buttons {
