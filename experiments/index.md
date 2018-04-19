@@ -12,5 +12,5 @@ All relevant Markup and Styles are directly in the respective HTML-File. All Sou
 ## Demos
 
 - [CSS Views (sans JS!)]({{ '/experiments/css-views' | prepend: site.baseurl }}) - a single-page, multi-view app without JavaScript!
-- [WebGL banner]({{ '/experiments/webgl-banner' | prepend: site.baseurl }}) - a banner background rendered using WebGL
+- [WebGL banner]({{ '/experiments/webgl-banner.html' | prepend: site.baseurl }}) - a banner background rendered using WebGL
 - [Clearfix]({{ '/experiments/clearfix' | prepend: site.baseurl }}) - clearing floats
