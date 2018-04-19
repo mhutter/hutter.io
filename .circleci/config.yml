@@ -38,13 +38,16 @@ jobs:
   deploy:
     docker:
       - image: ubuntu
+    environment:
+      - DEBIAN_FRONTEND: noninteractive
     working_directory: ~/repo
     steps:
       - run:
           name: Install dependencies
           command: |
             apt-get update -q && \
-            apt-get install rsync ca-certificates -yq
+            apt-get install -y -q --no-install-recommends \
+              rsync ca-certificates openssh-client
       - attach_workspace:
           at: ~/repo
       - run:
