@@ -1,0 +1,48 @@
+---
+version: 2
+
+jobs:
+  build:
+    docker: &docker
+      - image: circleci/ruby:2.5
+    environment:
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES: 'true'
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: rake rebuild
+      - run: bundle exec htmlproofer ./_site --disable-external
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - persist_to_workspace:
+          root: .
+          paths: _site
+
+  deploy:
+    docker: *docker
+    steps:
+      - attach_workspace:
+          at: .
+      - run: echo "User $SSH_USER" >> ~/.ssh/config
+      - run: USER="$SSH_USER" rake deploy
+
+workflow:
+  version: 2
+  jobs:
+    - build
+    - deploy:
+        requires:
+          - build
+        filters:
+          branches:
+            only: master
