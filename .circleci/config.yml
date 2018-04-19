@@ -54,11 +54,15 @@ jobs:
           name: Configure SSH
           command: |
             mkdir -p ~/.ssh && \
-            echo "User $SSH_USER" >> ~/.ssh/config
+            cat >> ~/.ssh/config <<EOT
+            Host $SSH_HOST
+              User $SSH_USER
+              StrictHostKeyChecking no
+            EOT
       - run:
           name: Deploy site
           command: |
-            rsync -aPz --delete _site/ hutter.io:public_html/hutter.io/
+            rsync -aPz --delete _site/ "${SSH_HOST}:public_html/hutter.io/"
 
 workflows:
   version: 2
