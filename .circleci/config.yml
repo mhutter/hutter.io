@@ -42,15 +42,20 @@ jobs:
     steps:
       - run:
           name: Install dependencies
-          command: apt-get update && apt-get install rsync ca-certificates -y
+          command: |
+            apt-get update -q && \
+            apt-get install rsync ca-certificates -yq
       - attach_workspace:
           at: ~/repo
       - run:
           name: Configure SSH
-          command: echo "User $SSH_USER" >> ~/.ssh/config
+          command: |
+            mkdir -p ~/.ssh && \
+            echo "User $SSH_USER" >> ~/.ssh/config
       - run:
           name: Deploy site
-          command: 'rsync -aPz --delete _site/ hutter.io:public_html/hutter.io/'
+          command: |
+            rsync -aPz --delete _site/ hutter.io:public_html/hutter.io/
 
 workflows:
   version: 2
