@@ -2,7 +2,6 @@
 layout: post
 title: "Java: Create self-signed SSL certificates for Tomcat"
 excerpt: A quick guide on how to generate a self-signed SSL certificate using the Java keytool and how to configure it in Tomcat.
-crosspost_to_medium: true
 tags: [SSL,java,tomcat]
 ---
 
