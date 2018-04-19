@@ -10,15 +10,23 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/repo
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: rake rebuild
-      - run: bundle exec htmlproofer ./_site --disable-external
+      - run:
+          name: Install Dependencies
+          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run:
+          name: Build site
+          command: rake rebuild
+      - run:
+          name: Check site
+          command: bundle exec htmlproofer ./_site --disable-external
 
       - save_cache:
           paths:
@@ -29,20 +37,23 @@ jobs:
           paths: _site
 
   deploy:
-    docker: *docker
+    docker:
+      - image: instrumentisto/rsync-ssh
+    working_directory: ~/repo
     steps:
       - attach_workspace:
-          at: .
+          at: ~/repo
       - run: echo "User $SSH_USER" >> ~/.ssh/config
-      - run: USER="$SSH_USER" rake deploy
+      - run: rake deploy
 
-workflow:
+workflows:
   version: 2
-  jobs:
-    - build
-    - deploy:
-        requires:
-          - build
-        filters:
-          branches:
-            only: master
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
