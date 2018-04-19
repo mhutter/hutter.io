@@ -37,16 +37,13 @@ jobs:
 
   deploy:
     docker:
-      - image: ubuntu
-    environment:
-      - DEBIAN_FRONTEND: noninteractive
+      - image: alpine
     working_directory: ~/repo
     steps:
       - run:
           name: Install dependencies
           command: |
-            apt-get update -q && \
-            apt-get install -y -q --no-install-recommends \
+            apk add --no-cache \
               rsync ca-certificates openssh-client
       - attach_workspace:
           at: ~/repo
