@@ -6,4 +6,3 @@ tags: linux sles
 {% highlight sh %}
 zypper se -t pattern
 {% endhighlight %}
-  
