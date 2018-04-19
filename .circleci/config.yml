@@ -3,7 +3,7 @@ version: 2
 
 jobs:
   build:
-    docker: &docker
+    docker:
       - image: circleci/ruby:2.5
     environment:
       - NOKOGIRI_USE_SYSTEM_LIBRARIES: 'true'
@@ -17,7 +17,6 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run:
           name: Install Dependencies
           command: bundle install --jobs=4 --retry=3 --path vendor/bundle
@@ -33,18 +32,25 @@ jobs:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - persist_to_workspace:
-          root: .
+          root: ~/repo
           paths: _site
 
   deploy:
     docker:
-      - image: instrumentisto/rsync-ssh
+      - image: ubuntu
     working_directory: ~/repo
     steps:
+      - run:
+          name: Install dependencies
+          command: apt-get update && apt-get install rsync ca-certificates -y
       - attach_workspace:
           at: ~/repo
-      - run: echo "User $SSH_USER" >> ~/.ssh/config
-      - run: rake deploy
+      - run:
+          name: Configure SSH
+          command: echo "User $SSH_USER" >> ~/.ssh/config
+      - run:
+          name: Deploy site
+          command: 'rsync -aPz --delete _site/ hutter.io:public_html/hutter.io/'
 
 workflows:
   version: 2
