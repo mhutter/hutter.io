@@ -138,7 +138,7 @@ Now the workflow will pause after the `check` and `preview` steps.
 Happy deploying continuously!
 
 
-[previous post]: /2018/04/19/managing-dns-records-the-devops-way
+[previous post]: {{ site.baseurl }}{% post_url 2018-04-19-managing-dns-records-the-devops-way %}
 [DnsControl]: https://stackexchange.github.io/dnscontrol/
 [Google Cloud DNS]: https://cloud.google.com/dns/
 [CircleCI]: https://circleci.com/

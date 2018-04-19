@@ -62,4 +62,4 @@ setup and automatically deploy each change!
 [4]: https://github.com/mhutter/dns
 [5]: https://stackexchange.github.io/dnscontrol/provider-list
 [6]: https://stackexchange.github.io/dnscontrol/getting-started
-[next post]: /2018/04/20/continuously-deploying-dns-records-with-dnscontrol-and-circleci
+[next post]: {{ site.baseurl }}{% post_url 2018-04-20-continuously-deploying-dns-records-with-dnscontrol-and-circleci %}
