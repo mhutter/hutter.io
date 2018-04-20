@@ -53,8 +53,8 @@ I really like DnsControl for various reasons:
     `dnsconfig.js` anymore. This really helps with keeping your zones cleaned
     up!
 
-And that's it! In the next post, I'll describe how to further automate our setup
-and automatically deploy each change!
+And that's it! In the [next post][], I describe how to further automate our
+setup and automatically deploy each change!
 
 [1]: https://github.com/srueg/dynamic-cloud-dns
 [2]: https://stackexchange.github.io/dnscontrol/
@@ -62,3 +62,4 @@ and automatically deploy each change!
 [4]: https://github.com/mhutter/dns
 [5]: https://stackexchange.github.io/dnscontrol/provider-list
 [6]: https://stackexchange.github.io/dnscontrol/getting-started
+[next post]: {{ site.baseurl }}{% post_url 2018-04-20-continuously-deploying-dns-records-with-dnscontrol-and-circleci %}

@@ -22,7 +22,9 @@ jobs:
           command: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run:
           name: Build site
-          command: rake rebuild
+          command: |
+            rm -rf _site
+            bundle exec jekyll build
       - run:
           name: Check site
           command: bundle exec htmlproofer ./_site --disable-external
