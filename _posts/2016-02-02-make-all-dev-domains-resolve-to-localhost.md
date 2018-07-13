@@ -7,6 +7,9 @@ tags: [dnsmasq,dns,wildcard,dev,centos]
 
 It's time for my yearly blog post, so let's get started!
 
+
+**Update 2018/07/13** _Both Chrome and Firefox now [enforces HTTPS on all `.dev` (and `.foo`) domains via a preloaded HSTS header](https://ma.ttias.be/chrome-force-dev-domains-https-via-preloaded-hsts/). This means that you have to use something else for your development environment. Or even better, make sure your app does native HTTPS! If you think "my app doesn't need HTTPS, I don't handle any information" you should read [Troy Hunts excellent "Here's Why Your Static Website Needs HTTPS"](https://www.troyhunt.com/heres-why-your-static-website-needs-https/)._
+
 Some development environments use *.dev-domains which point to localhost. Creating a hosts-entry for every single domain is not an elegant solution, so let's do something easier: let's use dnsmasq to resolve ALL .dev-domains to localhost!
 
 _Tested on CentOS 7, but should work similarly for other Linuxes._
