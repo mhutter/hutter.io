@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mhu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hutter.io
+  * I am mhu (https://keybase.io/mhu) on keybase.
+  * I have a public key ASCtV_yPvc1D8MS_O4_8KDpZLbsxyTZLZBp0uuZyfYolSQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ad57fc8fbdcd43f0c4bf3b8ffc283a592dbb31c9364b641a74bae6727d8a25490a",
+      "host": "keybase.io",
+      "kid": "0120ad57fc8fbdcd43f0c4bf3b8ffc283a592dbb31c9364b641a74bae6727d8a25490a",
+      "uid": "fd8bdb291ca4901a6a31539017e49b19",
+      "username": "mhu"
+    },
+    "merkle_root": {
+      "ctime": 1561475426,
+      "hash": "4fc5ba53c85103a1f2b9a30a42a01afe441cd8a36a99dad49f364d96fe077b81c27bf143df7120366a63b9d09b4515729faa5f837ae37e68ca00a774465f8fcd",
+      "hash_meta": "ec34cc89c92435afd4844cb5a12b05e01a1bcecba3a48a1541676d5399b38f86",
+      "seqno": 5636462
+    },
+    "service": {
+      "entropy": "H3kJGPoV0rp0bX6UfWD//Tj/",
+      "hostname": "hutter.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1561475442,
+  "expire_in": 504576000,
+  "prev": "29436088e5c8c639ac9d6e5b7430f0f20fb9ed5e008d9e5fd6de37da20ac6bc0",
+  "seqno": 45,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrVf8j73NQ/DEvzuP/Cg6WS27Mck2S2QadLrmcn2KJUkKp3BheWxvYWTESpcCLcQgKUNgiOXIxjmsnW5bdDDw8g+57V4AjZ5f1t432iCsa8DEIBDXhcX+2e9+jOsBHdTDrgF3t2X65ZfZhsos9qRF8OnBAgHCo3NpZ8RAEgv5Szgq6uWEzfesYwvJd16$
+IWWYYEKLSrWZBwrfLTaZPP4zujjHBbalbazUsi4JuEGe9FDI5mwkB2TlWmRPB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFObedqJy1ixokqRoyJjW/rpqqPXbiQhlmMsWIc5J46Ko3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mhu
+==================================================================
